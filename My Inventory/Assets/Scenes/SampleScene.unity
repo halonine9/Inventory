@@ -2289,7 +2289,7 @@ GameObject:
   m_Component:
   - component: {fileID: 771953072}
   - component: {fileID: 771953071}
-  - component: {fileID: 771953070}
+  - component: {fileID: 771953073}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -2297,18 +2297,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &771953070
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 771953069}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 224bb06504fe5264da9581ef74c8dd7f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &771953071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2321,6 +2309,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4567341cdb267f04180ba2b8141c0fd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  uiManager: {fileID: 771953073}
+  Atk: 30
+  Def: 10
+  Hp: 50
+  Critical: 25
 --- !u!4 &771953072
 Transform:
   m_ObjectHideFlags: 0
@@ -2336,6 +2329,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &771953073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 771953069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30898467682b45249b422014bf5c4d14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  atkText: {fileID: 1745157837}
+  defText: {fileID: 403351461}
+  hpText: {fileID: 270574193}
+  criticalText: {fileID: 1992094624}
 --- !u!1 &784383981
 GameObject:
   m_ObjectHideFlags: 0
