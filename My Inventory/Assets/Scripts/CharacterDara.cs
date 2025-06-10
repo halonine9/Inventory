@@ -24,11 +24,29 @@ public class CharacterData
       if (equippedItems.Contains(item))
       {
          equippedItems.Remove(item);
+         RemoveItem(item);
       }
       else
       {
          equippedItems.Add(item);
+         AddItem(item);
+
       }
+   }
+   private void AddItem(ItemData item)
+   {
+      Attack += item.attackBonus;
+      Defense += item.defenseBonus;
+      HP += item.hpBonus;
+      Critical += item.criticalBonus;
+   }
+
+   private void RemoveItem(ItemData item)
+   {
+      Attack -= item.attackBonus;
+      Defense -= item.defenseBonus;
+      HP -= item.hpBonus;
+      Critical -= item.criticalBonus;
    }
    public bool IsEquipped(ItemData item)
    {
