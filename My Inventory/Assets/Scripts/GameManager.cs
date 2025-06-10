@@ -41,7 +41,12 @@ public class GameManager : MonoBehaviour
         uiManager.UpdateStatus(Player);
         uiManager.UpdateInventoryUI(Player);
     }
-    
+    public void SetEquip(ItemData item)
+    {
+        Player.Equip(item);
+        uiManager.UpdateStatus(Player);
+    }
+
  
     
 }

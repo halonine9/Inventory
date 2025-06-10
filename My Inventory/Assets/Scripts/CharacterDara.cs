@@ -19,4 +19,20 @@ public class CharacterData
    public List<ItemData> Inventory { get; private set; } = new List<ItemData>();
    private List<ItemData> equippedItems = new List<ItemData>();
    
+   public void Equip(ItemData item)
+   {
+      if (equippedItems.Contains(item))
+      {
+         equippedItems.Remove(item);
+      }
+      else
+      {
+         equippedItems.Add(item);
+      }
+   }
+   public bool IsEquipped(ItemData item)
+   {
+      return equippedItems.Contains(item);
+   }
+
 }
