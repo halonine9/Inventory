@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
     {
         SetData();
     }
-
+    //캐릭터 데이터 설정
     public void SetData()
     {
         Player = new CharacterData(Atk, Def, Hp, Critical);
@@ -37,10 +37,11 @@ public class GameManager : MonoBehaviour
                 Player.Inventory.Add(item);
             }
         }
-
+        //UI 연동
         uiManager.UpdateStatus(Player);
         uiManager.UpdateInventoryUI(Player);
     }
+    //장착
     public void SetEquip(ItemData item)
     {
         Player.Equip(item);

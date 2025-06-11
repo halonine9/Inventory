@@ -18,7 +18,7 @@ public class CharacterData
    }
    public List<ItemData> Inventory { get; private set; } = new List<ItemData>();
    private List<ItemData> equippedItems = new List<ItemData>();
-   
+   //장착
    public void Equip(ItemData item)
    {
       if (equippedItems.Contains(item))
@@ -33,14 +33,15 @@ public class CharacterData
 
       }
    }
-   private void AddItem(ItemData item)
+   //장착시 능력치 증가
+   private void AddItem(ItemData item) 
    {
       Attack += item.attackBonus;
       Defense += item.defenseBonus;
       HP += item.hpBonus;
       Critical += item.criticalBonus;
    }
-
+   //장착 해제시 능력치 감소
    private void RemoveItem(ItemData item)
    {
       Attack -= item.attackBonus;
@@ -48,6 +49,7 @@ public class CharacterData
       HP -= item.hpBonus;
       Critical -= item.criticalBonus;
    }
+   //장착 여부
    public bool IsEquipped(ItemData item)
    {
       return equippedItems.Contains(item);
